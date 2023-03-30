@@ -10,6 +10,6 @@ def hanoi(n, x, y, z, count=0):
 
     return count 
 if __name__ == '__main__':
-    n = int(input('请输入汉诺塔层数：'))
+    n = int(input('请输入你的汉诺塔层数：'))
 
     print("所需步数：", hanoi(n, '1', '2', '3'))
