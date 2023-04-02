@@ -1,56 +1,26 @@
 #include <iostream>
+#include <string>
+#include <vector>
 #include <algorithm>
-#include <cstring>
-
 using namespace std;
 
-const int N = 30;
-
-class Solution
-{
-public:
-    Solution(string s)
-    {
-        str = s;
-    }
-
-    int allocate_numbers()
-    {
-        int len = str.size();
-        for(int i = 0; i < len; i ++) alpha[str[i] - 'a' + 1] ++;
-
-        sort(alpha + 1, alpha + 27, cmp);
-
-        int val = 26, res = 0;
-        for(int i = 1; i <= 26; i ++)
-        {
-            res += alpha[i] * val;
-            val --;
-        }
-
-        return res;
-    }
-
-private:
-    int alpha[N];
+int main() {
     string str;
-
-    static bool cmp(int a, int b)
-    {
-        return a > b;
+    cin >> str;
+    vector<int> count(26, 0);   // 字母出现次数
+    for (char c : str) {
+        int idx = c - 'a';
+        count[idx]++;
     }
-};
-
-int main()
-{
-    string s;
-
-    cin >> s;
-
-    Solution solution(s);
-    int res = solution.allocate_numbers();
-
-    cout << res << endl;
-
+    vector<int> weight(26); // 字母权值
+    for (int i = 0; i < 26; ++i) {
+        weight[i] = i + 1;
+    }
+    sort(weight.rbegin(), weight.rend()); // 降序排列权值
+    int sum = 0;
+    for (int i = 0; i < 26; ++i) {
+        sum += count[i] * weight[i];
+    }
+    cout << sum << endl;
     return 0;
 }
