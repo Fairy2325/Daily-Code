@@ -29,9 +29,12 @@ int main() {
 
     int res[20], cnt = 0, p;
     bool hasAppeared[20];
+
+    //初始化是否出现
     for(int i = 0; i < 20; ++i) {
         hasAppeared[i] = false;
     }
+
     for(int i = 0; i < n; ++i) {
         if(nums[i].count == 2 && !hasAppeared[i]) {
             res[cnt++] = nums[i].num;
