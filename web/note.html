@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>笔记</title>
+</head>
+<body>
+    
+    Web的组成<br>
+    结构:HTML->页面元素<br>
+    表现:CSS->页面样式<br>
+    行为:JavaScript->页面交互的动态效果<br><br>
+        
+    HTML(Hyper Text Markup Language)<br>
+    超文本标记语言<br><br>
+        
+    <strong>加粗字体</strong><br><br>
+        
+    骨架结构组成标签:<br>
+    html、head、title、body<br><br>
+
+    HTML的注释:<br><br>
+    <!--  -->
+
+    HTML标签的构成:<br>
+    双标签  单标签<br><br>
+    标签之间关系有:<br>
+    父子关系（嵌套关系）    兄弟关系（并列关系）<br><br>
+
+    排版标签：<br><br>
+
+    标题标签:<br>
+    代码:h系列标签
+    <h1>一级标题</h1>
+    <h2>二级标题</h2>
+    <h3>三级标题</h3>
+
+    段落标签:br<br>
+    代码:<p>这是一个段落，段落之间存在间隙</p><br><br>
+
+    换行标签:<br>
+    代码:br<br><br>
+
+    水平线标签
+    代码:hr
+    <hr><br><br> 
+
+    文本格式化标签:<br>
+    <b>加粗    b   strong</b><br>
+    <u>下划线  u   ins</u><br>
+    <i>倾斜    i   em</i><br>
+    <s>删除线  s   del</s><br><br>
+
+    媒体标签:<br>
+    图片标签:<br>
+    代码:img src="图片路径" alt="替换文本" title="悬停文字" width="" height=""<br>
+    特点:img标签需要展示对应的效果，需要借助标签的属性进行设置<br>
+    <img src="刘彦均-2022141460250.jpeg" alt="出现错误啦" title="悬停文字" width="200">
+        
+    音频标签:<br>
+    代码:audio src="" controls autoplay(大部分浏览器不支持) loop <br>
+    <audio src="./柳爽 - 漠河舞厅.mp3" autoplay controls loop></audio>    
+
+    视频标签:<br>
+    代码:video src="视频路径" controls autoplay loop muted<br>
+
+    链接标签:<br>
+    代码:a ('#':空链接) target="(_self/_blank)" <br>
+    <a href="https://baidu.com" target="_blank">跳转到百度</a>
+
+    <p><strong>index!!!</strong></p>
+
+    列表标签:<br>
+    无序列表 有序列表 自定义列表<br><br>
+    
+    无序列表:<br>
+    ul    表示无序列表的整体，用于包裹li标签<br>
+    li    表示无序列表的每一项，用于包含每一行的内容<br>
+    <ul>
+        <li>榴莲</li>
+        <li>香蕉</li>
+        <li>苹果</li>
+        <li>哈密瓜</li>
+        <li>火龙果</li>
+        <li>ul标签中只允许包含li标签</li>
+        <li>li标签可以包含任意内容</li>
+    </ul>
+    
+    有序列表:<br>
+    ol    表示有序列表的整体，用于包裹li标签<br>
+    li    表示有序列表的每一项，用于包含每一行的内容<br>
+    <ol>
+        <li>张三:100</li>
+        <li>李四:80</li>
+        <li>王二:60</li>
+        <li>ol标签中只允许包含li标签</li>
+        <li>li标签可以包含任意内容</li>
+    </ol>
+
+    自定义标签:
+    dl  表示自定义列表的整体，用于包裹dt/dd标签<br>
+    dt  表示自定义列表的主题<br>
+    dd  表示自定义列表的针对主题的每一项内容<br>
+
+    <dl>
+        <dt>帮助中心</dt>
+        <dd>账户管理</dd>
+        <dd>购物指南</dd>
+        <dd>反馈评价</dd>
+        <dd>dl标签只允许包含dt/dd标签</dd>
+        <dd>dt/dd标签可以包含任意内容</dd>
+    </dl>
+
+    <strong>表格标签</strong>:<br>
+    <dl>
+        <dt>基本标签:</dt>
+        <dd>table   表格整体，可用于包裹多个tr</dd>
+        <dd>tr      表格每行，可用于包裹td</dd>
+        <dd>td      表格单元格，可用于包裹内容</dd>
+    </dl>
+    
+
+    <table>
+        <tr>
+            <td>姓名</td>
+            <td>成绩</td>
+            <td>评语</td>
+        </tr>
+        <tr>
+            <td>小哥哥</td>
+            <td>100分</td>
+            <td>handsome</td>
+        </tr>
+        <tr>
+            <td>小姐姐</td>
+            <td>100分</td>
+            <td>beautiful</td>
+        </tr>
+        <tr>
+            <td>总结</td>
+            <td>郎才女貌</td>
+            <td>郎才女貌</td>
+        </tr>
+    </table><br>
+    <table border="1" width="600" height="">
+        <caption><strong>表格相关属性</strong></caption>
+        <tr>
+            <th>属性名</th>
+            <th>属性值</th>
+            <th>属性值效果</th>
+        </tr>
+        <tr>
+            <td>border</td>
+            <td>数字</td>
+            <td>边框宽度</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>数字</td>
+            <td>表格宽度</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>数字</td>
+            <td>表格高度</td>
+        </tr>
+    </table>
+    <br>
+    caption 表格大标题 表示表格整体大标题，默认上方居中<br>
+    th 表头单元格 表示一列小标题，通常用于表格第一行，默认加粗并居中<br><br>
+
+    <br>
+    <table border="1">
+        <caption>表格的结构标签</caption>
+        <tr>
+            <th>标签名</th>
+            <th>名称</th>
+        </tr>
+        <tr>
+            <td>thead</td>
+            <td>表格头部</td>
+        </tr>
+        <tr>
+            <td>tbody</td>
+            <td>表格主体</td>
+        </tr>
+        <tr>
+            <td>tfoot</td>
+            <td>表格底部</td>
+        </tr>
+    </table><br>
+
+    <table border="1">
+    <thead>
+        <tr>
+            <th>姓名</th>
+            <th>成绩</th>
+            <th>评语</th>
+        </tr>
+    </thead>
+        <tbody>
+            <tr>
+                <td>小哥哥</td>
+                <td>100分</td>
+                <td>handsome</td>
+            </tr>
+            <tr>
+                <td>小姐姐</td>
+                <td>100分</td>
+                <td>beautiful</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>总结</td>
+                <td>郎才女貌</td>
+                <td>郎才女貌</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+    <table border="1">
+        <caption>合并单元格</caption>
+        <tr>
+            <th>属性名</th>
+            <th>属性值</th>
+            <th>说明</th>
+        </tr>
+        <tr>
+            <td>rowspan</td>
+            <td>合并单元格的个数</td>
+            <td>垂直合并，保留上面的</td>
+        </tr>
+        <tr>
+            <td>colspan</td>
+            <td>合并单元格的个数</td>
+            <td>水平合并，保留左边的</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1">
+        <caption><strong>学生成绩单</strong></caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>成绩</th>
+                <th>评语</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr>
+                    <td>小哥哥</td>
+                    <td rowspan="2">100分</td>
+                    <td>handsome</td>
+                </tr>
+                <tr>
+                    <td>小姐姐</td>
+                    <td>beautiful</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>总结</td>
+                    <td>郎才女貌</td>
+                    <td>郎才女貌</td>
+                </tr>
+            </tfoot>
+        </table>
+        <br>
+        <strong>表单标签:</strong><br>
+        <br>
+        <strong>input</strong><br>
+        <form action="">
+        text        文本框，用于输入单行文本<br>
+        文本框:<input type="text" placeholder="请输入用户名"><br>
+        password    密码框，用于输入密码<br>
+        密码框:<input type="password" placeholder="请输入密码"><br>
+        radio       单选框，用于多选一<br>
+        单选框:<input type="radio" name="gender" checked>男 <input type="radio" name="gender">女<br>
+        checkbox    多选框，用于多选多<br>
+        多选框:<input type="checkbox" name="hobby">篮球 <input type="checkbox" name="hobby">唱 <input type="checkbox" name="hobby">跳<br>
+        file        文件选择，用于之后上传文件<br>
+        文件选择框:<input type="file" multiple><br>
+        submit      提交按钮，用于提交<br>
+        提交按钮:<input type="submit" value="登陆"><br>
+        reset       重置按钮，用于重置<br>
+        重置按钮:<input type="reset"><br>
+        button      普通按钮，默认无功能，之后配合js添加功能<br>
+        普通按钮:<input type="button" value="普通按钮"><br>
+        </form>
+        <br>
+        input系列标签-文本框属性:placeholder=""<br>
+        input系列标签-选择框属性:name="",checked=""<br>
+        input系列标签-文件框属性:multiple<br>
+        input系列标签-按钮属性值:submit,reset,button,form="",value=""<br>
+        <br>
+        button作为标签,属性值有:submit,reset,button<br>
+        <button type="button">我是普通按钮</button>
+        <button type="submit">我是提交按钮</button>
+        <button type="reset">我是重置按钮</button>
+        
+        <br>
+        <br>
+
+        select下拉菜单标签:<br><br>
+        标签组成:<br>
+        select标签:下拉菜单的整体<br>
+        option标签:下拉菜单的每一项<br><br>
+        常见属性:<br>
+        selected:下拉菜单的默认选中<br>
+        <select name="" id="">
+            <option value="">北京</option>
+            <option value="">上海</option>
+            <option value="">广州</option>
+            <option value="">深圳</option>
+        </select>
+
+        <br>
+        <br>
+
+        textarea文本域标签:<br>
+        常见属性:<br>
+        cols="",rows=""<br>
+        <textarea>默认文字</textarea>
+
+        <br>
+        <br>
+
+        label标签:<br>
+        用于绑定内容与表单标签的关系<br>
+        <ol>
+            <caption>使用方法 1</caption>
+            <li>使用label标签把内容包裹起来</li>
+            <li>在表单标签上添加id属性</li>
+            <li>在label标签的for属性中设置对应的id属性值</li>
+        </ol>
+        <ol>
+            <caption>使用方法 2</caption>
+            <li>直接使用label标签把内容和表单标签一起包裹起来</li>
+            <li>需要把label标签的for属性删除即可</li>
+        </ol>
+        性别:
+        <input type="radio" name="gender" id="男"><label for="男">男</label>
+        <label><input type="radio" name="gender">女</label>
+
+        <br>
+        <br>
+
+        <strong>语义化标签</strong><br>
+        <br>
+        无语义的<br>
+        <div>div:一行只显示一个</div>
+        <div>div:一行只显示一个</div>
+        <span>span:在一行显示</span>
+        <span>span:在一行显示</span>
+        <br>
+        有语义的(用于手机网页)<br>
+        header  网页头部<br>
+        nav     网页导航<br>
+        footer  网页底部<br>
+        aside   网页侧边栏<br>
+        section 网页区块<br>
+        article 网页文章<br>
+
+        <br>
+        <strong>字符实体</strong><br>
+        空格:&nbsp;
+</body>
+</html>
