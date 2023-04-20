@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 关系：样式表 -->
+    <link rel="stylesheet" href="./my.css">
+</head>
+<style>
+    /* css的注释 */
+    /* 
+    选择器{
+        css属性
+    } 
+    */
+
+    /* 选择器 */
+    
+    /* 一、 标签选择器 就是 标签名命名的选择器 */
+    p {
+        /* 文字颜色变为红色 */
+        color: red;
+
+        /* 文字字体变大 */
+        font-size:30px; ;
+        
+        /* 背景颜色变为绿色 */
+        background-color: skyblue;
+
+        /* 改变高宽 */
+        /* width: 400px;
+        height: 100px; */
+
+    }
+
+    /* 二、 类选择器 定义和使用才能生效*/
+    /* 通过类名找到页面中所有带有这个类名的标签,设置样式 */
+    /* 类名可以由数字、字幕、下划线、中划线组成，不能以数字或中划线开头 */
+    /* 一个标签可以同时有多个类名，类名之间以空格隔开 */
+    /* 类名可以重复，一个类选择器可以同时选中多个标签 */
+    .red{
+        color: red;
+    }
+    .red{
+        background-color: orange;
+    }
+    .size{
+        font-size: 66px;
+    }
+
+    /* 三、 id选择器 */
+    /* 定义id选择器 */
+    /* 所有标签上都有id属性 */
+    /* id属性值在一个页面中是唯一的 */
+    /* 一个标签上只能有一个id属性值 */
+    /* 一个id选择器只能选中一个标签 */
+
+    #blue{
+        color: skyblue;
+    }
+
+    /* 四、 通配符选择器 */
+    /* 找到页面中所有的标签，设置样式 */
+    /* 优先级最低 */
+    *{
+        color: gray;
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+
+
+    /* 字体和文本样式 */
+    
+    /* 一、 字体大小(默认字号16) */
+    /* 属性名: font-size */
+    /* 属性值: number+px */
+
+    /* 二、 字体粗细 */
+    /* 属性名:font-weight */
+    /* 
+    取值：
+    关键字: normal  bold
+    纯数字: 400     700
+     */
+
+    h1{
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    /* 三、 字体样式（是否倾斜 ） */
+    /* 属性名:font-style */
+    /* 取值: 正常: normal 倾斜:italic */
+    h1{
+        font-style: italic;
+    }
+
+    /* 四、 字体系列 */
+    /* 属性名:font-family */
+    /*  */
+    h1{
+        font-family: 微软雅黑,黑体,sans-serif;
+    }
+
+    /* 五、 font相关属性的连写（复合属性） */
+    /* 属性名:font */
+    /* 取值:font:style weight size/line-height family （可以省略前两个）*/
+    test_font{
+        font: italic 700 66px 宋体;
+    }
+
+    /* 文本样式 */
+
+    /* 一、 文本缩进 */
+    /* 属性名:text-indent */
+    /* 取值:数字+px  or  数字+em*/
+    /* 默认字号16px ; 32 */
+    p{
+        text-indent: 2em;;
+    }
+
+    /* 二、 文本水平对齐方式 */
+    /* 属性名:text_align */
+    /* 取值: 左对齐left 居中对齐center 右对齐right */
+    /* center能让文本、span标签、a标签、input标签、img标签居中；需要给以上元素的父元素设置 */
+    h2{
+        text-align: center;
+    }
+    /* body{
+        text-align: center;
+    } */
+
+    /* 三、 文本修饰 */
+    /* 属性名:text-decoration */
+    /* 取值:下划线underline 删除线line-through 上划线overline 无装饰线none */
+    a{
+        text-decoration: none;
+    }
+
+
+
+    /* 四、 行高 */
+    /* 属性名:line-height */
+    /* 取值: 数字+px or 倍数（当前标签font-size的倍数）*/
+    p{
+        line-height: 1.5;
+    }
+
+    /* 拓展: 颜色常见取值 */
+    /* 十六进制表示法: #开头,后面跟6或者3个数字 */
+    /* rgba表示法:  red green blue(0-255) apparence(0-1)*/
+
+    /* 拓展: 标签水平 居中方法 */
+    /* margin:0 auto */
+    /* div{
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+        margin:0 auto;
+    } */
+
+    /* div尽量使用类名控制样式 */
+    body{
+        background-color: #f5f5f5;
+    }
+    .goods{
+        width: 234px;
+        height: 300px;
+        background-color: #fff;
+        /* 标签居中 */
+        margin: 0 auto; 
+        /* 内容居中 */
+        text-align: center;
+    }
+    
+    img{
+        width: 160px;
+    }
+
+    .title{
+        height: 25px;
+        font-size: 14px;
+    }
+    
+    .info{
+        height: 30px;
+        font-size: 12px;
+        color: #cccccc;
+    }
+    .price{
+        color: #ffa500;
+        font-size: 14px;
+
+    }
+
+    /* 选择器进阶 */
+    /* 一、 复合选择器 */
+
+        /* 1. 后代选择器：空格 */
+        /* 选择器语法: 选择器1 选择器2{css } */
+        /* 选择所有后代标签 */
+
+        /* 2. 后代选择器: > */
+        /* 选择器语法: 选择器1 > 选择器2{css} */
+        /* 选择子代标签 */
+
+    /* 二、 并集选择器 */
+        
+        /* 1.并集选择器: , */
+        /* 选择器语法: 选择器1 , 选择器2 {css}*/
+        /* 同时选择多个标签 */
+    
+    /* 三、 交集选择器 */
+
+        /* 1. 交集选择器:紧挨着 */
+        /* 语法: 选择器1选择器2{css} */
+    
+    /* 四、 hover伪类选择器 */
+    
+        /* 选中鼠标悬停在元素上的状态 */
+        /* 语法:选择器:hover{css}*/
+
+    /* 五、 Emmet语法 */
+
+        /* 作用:通过简写语法，快速生成代码 */
+    
+
+    /* 背景相关属性 background*/
+
+        /* 背景颜色 background-color */
+        /* 背景图片 background-image */
+        /* 背景平铺 background-repeat */
+            /* 属性值: repeat 水平和垂直方向平铺 no-repeat 不平铺 repeat -x/y 沿x/y平铺*/
+        /* 背景位置 background-position 水平方向位置 */
+            /* 属性值: web\css_learning\背景位置属性值.png*/
+        /* 背景相关属性连写 background:color image repeat position*/
+
+
+    /* 元素显示模式 */
+
+        /*1.1 块级元素 */
+
+            /* 显示特点: 独占一行 宽度默认为父元素一样大 可以设置宽高 */
+
+        /*2.1 行内元素 */
+
+            /* 显示特点: 一行可以显示多个  宽高默认由内容撑开，不可以设置*/
+
+        /*3.1 行内块元素 */
+
+            /* 显示特点:  一行可显示多个，可设置宽高*/
+            /* 代表标签: input textarea button select */ 
+
+        /* 4.1  元素显示模式转换 */
+
+            /* 属性:display:block转换为块级 :inline-block 转换成行内块元素 :inline转换为行内元素*/
+
+        /* 拓展: HTML嵌套规范注意点 */
+        /* 块级元素一般作为大容器，可以嵌套文本、块级、行内、行内块等等 */
+            /* but p标签不要嵌套div、p、h等块级元素 */
+        /* a标签内部可以嵌套任意元素 */
+            /* but a标签不能嵌套a标签 */
+
+        /* CSS特性 */
+            
+            /* 继承性 */
+                /* 文字控制属性都可以继承，其他的都不能继承 */
+                /* 1. color */
+                /* 2. font */
+                /* 3. text */
+                /* 4. line */
+                /* 5. ... */
+
+            /* 层叠性 */
+                /* 只有当选择器优先级相同时，才能通过层叠性判断结果 */
+
+            /* 优先级  */
+                /* 继承<通配符选择器<标签选择器<类选择器<id选择器<行内样式<!important */
+                    /* !important 写在属性值的后面，分号的前面 */
+                    /* !important 不能提升继承的优先级，只要是继承优先级最低 */
+                    /* 不推荐使用!important */
+
+            /* 符合选择器中: 行内样式的个数 id选择器的个数 类选择器的个数 标签选择器的个数 */
+
+</style>
+
+
+<body>
+    <p>这是一个p标签</p>
+    <p class="red size">这是类选择器</p>
+    <div class="red size">这个标签文字变红变大</div>
+    <div id="blue">蓝色字体</div>
+    <h1>一级标题</h1>
+    <test_font>测试font连写</test_font><br>
+    <p>css的意思是层叠样式表。层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。CSS不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。</p>
+    <h2>测试文本水平对齐</h2>
+    <img src="../刘彦均-2022141460250.jpeg" alt="" height="200"><br>
+    <a href="">我是超链接</a>
+    <div class="goods">
+            <img src="../刘彦均-2022141460250.jpeg" alt="">
+            <div class="title">ai生成图像</div>
+            <div class="info">来自Fairy</div>
+            <div class="price">20220414</div>
+    </div>
+
+</body>
+</html>
